@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class IntroScreen3 extends StatelessWidget {
   final VoidCallback onFinish;
 
-  const IntroScreen3({Key? key, required this.onFinish}) : super(key: key);
+  const IntroScreen3({super.key, required this.onFinish});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:creator/features/splash/views/splashscreen.dart';
 import 'package:creator/features/onboarding/views/onboardscreen.dart';
-//import '../features/auth/views/login_screen.dart';
+import '../features/auth/views/login_screen.dart';
+import 'package:creator/features/auth/views/signup_screen.dart';
+import 'package:creator/features/auth/views/verification_screen.dart';
+import 'package:creator/features/auth/views/forgotpassword_screen.dart';
 //import '../features/home/views/home_screen.dart';
 
 class AppRoutes {
@@ -14,12 +17,12 @@ class AppRoutes {
   static const String home = '/home';
 
   static Map<String, WidgetBuilder> routes = {
-    splash: (context) => SplashScreen(),
-    onboarding: (context) => OnboardingScreen(),
-    login: (context) => LoginScreen(),
-    signup: (context) => signupScreen(),
-    forgotpassword: (context) => forgotpassword(),
-    verification: (context) => verification(),
+    splash: (context) => const SplashScreen(),
+    onboarding: (context) => const OnboardingScreen(),
+    login: (context) => const LoginScreen(),
+    signup: (context) => const SignUpScreen(),
+    forgotpassword: (context) => const ForgotPasswordScreen(),
+    verification: (context) => const VerificationScreen(),
     home: (context) => HomeScreen(),
   };
 }

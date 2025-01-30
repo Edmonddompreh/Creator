@@ -4,6 +4,8 @@ import 'package:creator/features/onboarding/views/widgets/introscreen2.dart';
 import 'package:creator/features/onboarding/views/widgets/introscreen3.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }

@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../routes/app_routes.dart';
+import 'package:creator/features/splash/controllers/splashcontroller.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends ConsumerWidget {
+  const SplashScreen({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    // Navigate to the onboarding screen after 3 seconds
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
+  Widget build(BuildContext context, WidgetRef ref) {
+    // Listen to changes in the controller state
+    ref.listen<bool>(splashControllerProvider, (previous, next) {
+      if (next) {
+        Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
+      }
     });
+
+    // Trigger the delay logic when the screen is built
+    ref.read(splashControllerProvider.notifier).navigateAfterDelay();
 
     return Scaffold(
       body: Container(
