@@ -1,0 +1,28 @@
+name: creator
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.3.4
+  cupertino_icons: ^1.0.8
+  device_preview_plus: ^2.2.7
+  font_awesome_flutter: ^10.8.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.jpg
+    - assets/images/NHS4O1.jpg
+    - assets/images/ADMU1O2.jpg
+    - assets/images/HSUN6O3.jpg
